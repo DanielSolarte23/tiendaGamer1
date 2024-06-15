@@ -116,3 +116,4 @@ let botones = document.querySelectorAll('.increment');
 botones.forEach(boton => {
     boton.addEventListener('click', AgregarArticulo);
 });
+
