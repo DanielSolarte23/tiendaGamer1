@@ -1,0 +1,118 @@
+html{   
+    scroll-behavior: smooth;
+}
+
+
+#contenedor-carro{
+    display: none;
+    overflow-y: auto; /* Agregar barra de desplazamiento vertical */
+    background-color: rgba(0, 0, 0,0.9);
+    color: white;
+}
+
+#contenedor-carro #carrito{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#total {
+    position: fixed;
+    bottom: 0;
+    width: calc(34% - 16px); /* Ajusta el ancho según tu necesidad */
+    background-color: rgba(0, 0, 0,0.5);
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    border-top: 1px solid gray;
+}
+
+.tarjetaC{
+    border-left: black 10px;
+    border-bottom: 5px black;
+    width: 90%;
+}
+
+.tarjetaC .dev{
+    border-radius: 0%;
+}
+
+.tarjetaC h2{
+    font-weight: 700;
+}
+
+.tarjetaC .increment{
+    display: none;
+}
+
+.tarjetaC p{
+    display: none;
+}
+
+.tarjetaC .contenedor-img{
+    display: none;
+}
+
+#categoria{
+    display: none;
+}
+
+.eliminarBoton{
+    border: solid red;
+    width: 91.8%;
+    background-color: red;
+    color: white;
+    font-weight: 600;
+}
+
+.increment{
+    transition: 1s;
+}
+
+@media (max-width: 742px) {
+    .encabezado{
+        height: 12%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px 0 10px;
+    }
+
+    #halo{
+        height: fit-content;
+        padding-top: 90px;
+    }
+    #gears{
+        height: fit-content;
+    }
+    #god{
+        height: fit-content;
+    }
+    .respo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .respo .tarjets{
+        width: 90%;
+        height: 100%;
+    }
+    .borce{
+        display: none;
+    }
+    .textoCat{
+        display: none;
+    }
+    #contenedor-carro{
+        width: 100%;
+        left: 0%;
+    }
+
+    .increment{
+        height: 40px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+}

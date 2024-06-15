@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/src/images/titulo.png" type="image/x-icon">
+    <title>BORCELLE STORE</title>
+</head>
+
+<body class="h-screen">
+    <header class="encabezado h-1/6 w-full  flex text-4xl justify-between  px-20 py-2 fixed bg-blue-900">
+        <div class=" w-20">
+            <img class="w-full h-full object-cover" src="/src/images/titulo.png" alt="">            
+        </div>
+        <div class="borce mt-3 w-44 h-20 flex items-center ml-6">
+            <img class="w-full h h-full object-cover" src="/src/images/logo.png" alt="">
+        </div>
+        <ul class="flex">
+            <li class="flex justify-center items-center gap-3">
+                <p onclick="mostrarCategoria()" class="categ text-xl font-semibold text-amarrilloT cursor-pointer"><span class="textoCat">Categoria </span><i class="fa-solid fa-caret-down"></i></p>
+                <i onclick="mostrarCarro()" class="text-3xl fa-solid fa-bag-shopping text-amarrilloT"></i>
+                <p id="contador"
+                    class="w-10 h-10 bg-amarrilloT text-black rounded-full text-xl font-black flex justify-center items-center cursor-pointer">
+                    0</p>
+            </li>
+            <div id="categoria" class="absolute z-20 px-2 py-6 bg-black text-amarrilloT top-16 rounded-lg">
+                <ul class="text-base">
+                    <li onclick="ocultarCategoria(event)" class="border-b border-amarrilloT text-2xl"><a class="w-full" href="#halo">Halo</a></li>
+                    <li onclick="ocultarCategoria(event)" class="border-b border-amarrilloT text-2xl"><a href="#gears">Gears of war</a></li>
+                    <li onclick="ocultarCategoria(event)" class="border-b border-amarrilloT text-2xl"><a href="#god">God of war</a></li>
+                </ul>
+            </div>
+        </ul>
+    </header>
+    <div id="contenedor-carro" class="fixed bg-white border-2 border-gray-600 z-10 w-1/3 h-5/6 left-[67%] top-[95px]">
+        <header class="w-full p-3 text-2xl"><i onclick="ocultarCarro()" id="cerrar" class="fa-solid fa-xmark"></i>
+        </header>
+        <main class="" id="carrito"></main>
+        <div id="total" class="p-4 text-2xl">Total: $0</div>
+    </div>
+    <main id="halo" class=" h-screen flex items-end w-full bg-blue-700">
+        <section class="flex  respo h-5/6 px-2">
+            <article id="tarjeta1" class=" tarjets  flex flex-col items-center justify-evenly w-1/3   py-3">
+                <div class="dev flex flex-col w-11/12 px-6 text-justify items-center h-full justify-evenly bg-blue-900 text-white rounded-xl">
+                    <h1 class="text-xl font-bold">Halo 5 Guardians</h1>
+                    <div class="contenedor-img h-64">
+                        <img class="w-full h-full object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpkPnDTyb1hwM2tC06ee_qMdBZYW0Y3PCiWw&s" alt="imagen">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, quos.</p>
+                    <h2 class="precio w-1/2 flex justify-center bg-green-600 font-extrabold px-5 py-1 rounded-full">$15.000</h2>
+ 
+                    <button id="boton1" class="increment bg-amarrilloT rounded-full text-red-600 font-black  hover:bg-green-700 hover:text-white p-3">Agregar al carrito</button>
+                </div>
+            </article>
+            <article id="tarjeta2" class=" tarjets flex flex-col items-center justify-evenly w-1/3 py-3">
+                <div class="dev flex flex-col w-11/12 px-6 text-justify items-center h-full justify-evenly bg-blue-900 text-white rounded-xl">
+                    <h1 class="text-xl font-bold">Halo 4</h1>
+                    <div class="contenedor-img h-64">
+                        <img class="w-full h-full object-cover" src="https://upload.wikimedia.org/wikipedia/en/9/92/Halo_4_box_artwork.png" alt="imagen">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, quos.</p>
+                    <h2 class="precio w-1/2 flex justify-center bg-green-600 font-extrabold px-5 py-1 rounded-full">$15.000</h2>
+                    <!-- Error faltaba el id en los botones -->
+                    <button id="boton2" class="increment bg-amarrilloT rounded-full text-red-600 font-black hover:bg-green-700 hover:text-white p-3">Agregar al carrito</button>
+                </div>
+            </article>
+            <article id="tarjeta3" class=" tarjets  flex flex-col items-center justify-evenly w-1/3 py-3">
+                <div class="dev flex flex-col w-11/12 px-6 text-justify items-center h-full justify-evenly  bg-blue-900 text-white rounded-xl">
+                    <h1 class="text-xl font-bold">Halo 3</h1>
+                    <div class="contenedor-img h-64">
+                        <img class="w-full h-full object-cover" src="https://upload.wikimedia.org/wikipedia/en/b/b4/Halo_3_final_boxshot.JPG" alt="imagen">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, quos.</p>
+                    <h2 class="precio w-1/2 flex justify-center bg-green-600 font-extrabold px-5 py-1 rounded-full">$15.000</h2>
+                    <!-- Error faltaba el id en los botones -->
+                    <button id="boton3" class="increment bg-amarrilloT rounded-full text-red-600 font-black  hover:bg-green-700 hover:text-white p-3">Agregar al carrito</button>
+                </div>
+            </article>
+        </section>
+    </main>
+    <main id="gears" class="h-screen w-full bg-blue-700 flex items-end">
+        <section class="flex respo h-5/6 px-2">
+            <article id="tarjeta4" class="tarjets flex flex-col items-center justify-evenly w-1/3 py-3">
+                <div class="dev flex flex-col w-11/12 px-6 text-justify items-center h-full justify-evenly bg-blue-900 text-white rounded-xl">
+                    <h1 class="text-xl font-bold">Gears of war 2</h1>
+                    <div class="contenedor-img h-64">
+                        <img class="w-full h-full object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJQ_t6gdFFHm1ydMxZwPg4TE6KuDtyV1j6wg&s" alt="imagen">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, quos.</p>
+                    <h2 class="precio w-1/2 flex justify-center bg-green-600 font-extrabold px-5 py-1 rounded-full">$15.000</h2>
+                    <!-- Error faltaba el id en los botones -->
+                    <button id="boton4" class="increment bg-amarrilloT rounded-full text-red-600 font-black  hover:bg-green-700 hover:text-white p-3">Agregar al carrito</button>
+                </div>
+            </article>
+            <article id="tarjeta5" class="tarjets flex flex-col items-center justify-evenly w-1/3 py-3">
+                <div class="dev flex flex-col w-11/12 px-6 text-justify items-center h-full justify-evenly bg-blue-900 text-white rounded-xl">
+                    <h1 class="text-xl font-bold">Gears of war</h1>
+                    <div class="contenedor-img h-64">
+                        <img class="w-full h-full object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaBvbNcLPDkoY4tEoDkyW2ucOdO9uAIKUdPQ&s" alt="imagen">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, quos.</p>
+                    <h2 class="precio w-1/2 flex justify-center bg-green-600 font-extrabold px-5 py-1 rounded-full">$15.000</h2>
+                    <!-- Error faltaba el id en los botones -->
+                    <button id="boton5" class="increment bg-amarrilloT rounded-full text-red-600 font-black  hover:bg-green-700 hover:text-white p-3">Agregar al carrito</button>
+                </div>
+            </article>
+            <article id="tarjeta6" class="tarjets flex flex-col items-center justify-evenly w-1/3 py-3">
+                <div class="dev flex flex-col w-11/12 px-6 text-justify items-center h-full justify-evenly  bg-blue-900 text-white rounded-xl">
+                    <h1 class="text-xl font-bold">Gears of war 3</h1>
+                    <div class="contenedor-img h-64">
+                        <img class="w-full h-full object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkkAG6k1aroLYiwkt3wMK2HutuoriRjg7cfA&s" alt="imagen">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, quos.</p>
+                    <h2 class="precio w-1/2 flex justify-center bg-green-600 font-extrabold px-5 py-1 rounded-full">$15.000</h2>
+                    <!-- Error faltaba el id en los botones -->
+                    <button id="boton6" class="increment bg-amarrilloT rounded-full text-red-600 font-black  hover:bg-green-700 hover:text-white p-3">Agregar al carrito</button>
+                </div>
+            </article>
+        </section>
+    </main>
+    <main id="god" class=" h-screen flex items-end w-full bg-blue-700">
+        <section class="flex respo h-5/6 px-2 flex-wrap">
+            <!-- Error faltaba acomor los id de las tarjetas -->
+            <article id="tarjeta7" class="tarjets flex flex-col items-center justify-evenly w-1/3 py-3">
+                <div class="dev flex flex-col w-11/12 px-6 text-justify items-center h-full justify-evenly bg-blue-900 text-white rounded-xl">
+                    <h1 class="text-xl font-bold">God of war</h1>
+                    <div class="contenedor-img h-64">
+                        <img class="w-full h-full object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8JDCby5EElYasH-D7OwOFOD7HniAqH7EwLg&s" alt="imagen">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, quos.</p>
+                    <h2 class="precio w-1/2 flex justify-center bg-green-600 font-extrabold px-5 py-1 rounded-full">$15.000</h2>
+                    <!-- Error faltaba el id en los botones -->
+                    <button id="boton7" class="increment bg-amarrilloT rounded-full text-red-600 font-black  hover:bg-green-700 hover:text-white p-3">Agregar al carrito</button>
+                </div>
+            </article>
+            <article id="tarjeta8" class="tarjets flex flex-col items-center justify-evenly w-1/3 py-3">
+                <div class="dev flex flex-col w-11/12 px-6 text-justify items-center h-full justify-evenly bg-blue-900 text-white rounded-xl">
+                    <h1 class="text-xl font-bold">God of war ragnarok</h1>
+                    <div class="contenedor-img h-64">
+                        <img class="w-full h-full object-cover" src="https://upload.wikimedia.org/wikipedia/en/e/ee/God_of_War_Ragnar%C3%B6k_cover.jpg" alt="imagen">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, quos.</p>
+                    <h2 class="precio w-1/2 flex justify-center bg-green-600 font-extrabold px-5 py-1 rounded-full">$15.000</h2>
+                    <!-- Error faltaba el id en los botones -->
+                    <button id="boton8" class="increment bg-amarrilloT rounded-full text-red-600 font-black  hover:bg-green-700 hover:text-white p-3">Agregar al carrito</button>
+                </div>
+            </article>
+            <article id="tarjeta9" class="tarjets flex flex-col items-center justify-evenly w-1/3 py-3">
+                <div class="dev flex flex-col w-11/12 px-6 text-justify items-center h-full justify-evenly  bg-blue-900 text-white rounded-xl">
+                    <h1 class="text-xl font-bold">God of war chain of olympus</h1>
+                    <div class="contenedor-img h-64">
+                        <img class="w-full h-full object-cover" src="https://upload.wikimedia.org/wikipedia/en/3/3a/God_of_War_Chains_of_Olympus_NA_version_front_cover.jpg" alt="imagen">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, quos.</p>
+                    <h2 class="precio w-1/2 flex justify-center bg-green-600 font-extrabold px-5 py-1 rounded-full">$15.000</h2>
+                    <!-- Error faltaba el id en los botones -->
+                    <button id="boton9" class="increment bg-amarrilloT rounded-full text-red-600 font-black  hover:bg-green-700 hover:text-white p-3">Agregar al carrito</button>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src="/src/script.js"></script>
+</body>
+
+</html>
