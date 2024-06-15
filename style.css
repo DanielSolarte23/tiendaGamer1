@@ -73,11 +73,8 @@ html{
     z-index: 1;
 }
 
-.dev{
-    background-image: url(images/fondocarta.png);
-    background-size: cover;
-    background-color: transparent;
-  
+.dev {
+    border: solid 3px black;
 }
 
 
@@ -143,7 +140,6 @@ html{
         width: 70%;
         display: flex;
         align-items: center;
-        margin-bottom: 2px;
-        margin-top: 15px;
+        margin-top: 5px;
     }
 }
